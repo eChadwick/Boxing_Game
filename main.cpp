@@ -35,6 +35,8 @@ class Human
 
 int main()
 {   
+    cout << "You are standing in a boxing ring staring down Moneyman Mayweather.  You're not sure where you are or how you \ngot here but as the bell rings" << 
+    " and Moneyman pounds his gloves together, it's clear you have to do something...\n\n";
     srand(time(NULL));
     int p1Damage;
     int p2Damage;
@@ -159,12 +161,12 @@ int Human::lightAttack()
     {
         int damage;
         damage = rand() % 5 + 1;
-        cout << "Human light attack damage = " << damage << endl;
+        cout << "You land a quick jab for " << damage << " damage." << endl;
         return damage;
     }
     else
     {
-        cout << "Human light attack miss" << endl;
+        cout << "You toss out a quick jab but Floyd shrugs it off." << endl;
         return 0;
     }
 };
@@ -177,12 +179,12 @@ int Human::heavyAttack()
     {
         int damage;
         damage = rand() % 5 + 3;
-        cout << "Human heavy attack damage = " << damage << endl;
+        cout << "You connect with a wicked cross for " << damage << " damage." << endl;
         return damage;
     }
     else
     {
-        cout << "Human heavy attack miss" << endl;
+        cout << "Floyd dodges your reckless attack." << endl;
         return 0;
     }
 };
@@ -196,12 +198,12 @@ int Human::recover()
         int heal;
         heal = rand() % 5 + 2;
         this->HP += heal;
-        cout << "Human recovery = " << heal << " , total HP= " << endl;
+        cout << "You steady yourself and recover " << heal << " damage." << endl;
         return 0;
     }  
     else
     {
-        cout << "Human recovery miss" << endl;   
+        cout << "You try to catch your breath but Floyd won't let you." << endl;   
         return 0;
     }
 };
